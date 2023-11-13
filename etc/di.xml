@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package     Mage4_Turnstile
+ * @author      Rehan Mobin <m.rehan.mobin@gmail.com>
+ * @copyright   Copyright (c) Mage4. All rights reserved. (https://www.mage4.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Mage4\Turnstile\Model\Turnstile\TurnstileApi" type="Mage4\Turnstile\Model\Turnstile\TurnstileApiClient" />
+</config>

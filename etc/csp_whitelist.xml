@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @package     Mage4_Turnstile
+ * @author      Rehan Mobin <m.rehan.mobin@gmail.com>
+ * @copyright   Copyright (c) Mage4. All rights reserved. (https://www.mage4.com)
+ */
+-->
+<csp_whitelist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Csp:etc/csp_whitelist.xsd">
+    <policies>
+        <policy id="script-src">
+            <values>
+                <value id="cf_turnstile" type="host">challenges.cloudflare.com</value>
+            </values>
+        </policy>
+        <policy id="frame-src">
+            <values>
+                <value id="cf_turnstile" type="host">challenges.cloudflare.com</value>
+            </values>
+        </policy>
+    </policies>
+</csp_whitelist>

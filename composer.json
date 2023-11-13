@@ -1,0 +1,35 @@
+{
+    "name": "mage4/magento2-cf-turnstile",
+    "description": "Magento extension for using Cloud Flare Turnstile to protect frontend and admin forms",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Rehan Mobin",
+            "email": "m.rehan.mobin@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "magento/framework": "*",
+        "prewk/result": ">=3.3.0"
+    },
+    "keywords": [
+        "magento 2",
+        "magento",
+        "cloudflare",
+        "turnstile",
+        "cloudflare turnstile",
+        "captcha",
+        "magento captcha",
+        "magento forms"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Mage4\\Turnstile\\": ""
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<?php
+/**
+ * @category  Mage4
+ * @package   Mage4_Turnstile
+ * @author    Rehan Mobin <m.rehan.mobin@gmail.com>
+ * @copyright Copyright (c) Mage4. All rights reserved. (https://www.mage4.com)
+ */
+
+/** @var $block \Mage4\Turnstile\Block\Turnstile */
+?>
+<input type="hidden" name="turnstile_for" value="<?=/* @noEscape */ $this->getData('turnstile_for')?>">
+<div
+    class="field-turnstile"
+    id="container-<?= /* @noEscape */ $block->getTurnstileId() ?>"
+    data-bind="scope:'<?= /* @noEscape */ $block->getTurnstileId() ?>'"
+>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+{
+    "#container-<?= /* @noEscape */ $block->getTurnstileId() ?>": {
+        "Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>
+    }
+}
+</script>

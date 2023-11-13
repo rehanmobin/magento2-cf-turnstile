@@ -1,0 +1,17 @@
+<!--
+/**
+ * @package     Mage4_Turnstile
+ * @author      Rehan Mobin <m.rehan.mobin@gmail.com>
+ * @copyright   Copyright (c) Mage4. All rights reserved. (https://www.mage4.com)
+ */
+-->
+<div class="g-recaptcha"></div>
+    <div class="field">
+        <div data-bind="{
+    attr: {
+        'id': 'wrapper-' + getTurnstileId(),
+        'class': 'cf-turnstile'
+    },
+    'afterRender': addCloudFlareTurnstileScriptTag
+}" tabindex="-1" />
+</div>

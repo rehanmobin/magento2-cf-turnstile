@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package     Mage4_Turnstile
+ * @author      Rehan Mobin <m.rehan.mobin@gmail.com>
+ * @copyright   Copyright (c) Mage4. All rights reserved. (https://www.mage4.com)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mage4_extensions" translate="label" sortOrder="500">
+            <label>Mage4 Extensions</label>
+        </tab>
+        <section id="m4_trunstile" translate="label" type="text" sortOrder="700" showInDefault="1"
+                 showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Cloudflare Trunstile Captcha</label>
+            <tab>mage4_extensions</tab>
+            <resource>Mage4_Turnstile::config</resource>
+            <group id="m4_trunstile_api_config" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Cloudflare Trunstile Settings</label>
+                <field id="site_key" translate="label" type="obscure" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sitekey</label>
+                    <validate>required-entry</validate>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="secret_key" translate="label" type="obscure" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Secret key</label>
+                    <validate>required-entry</validate>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="theme" translate="label" type="select" sortOrder="12" showInDefault="1"
+                       showInWebsite="1" showInStore="0" canRestore="1">
+                    <label>Theme</label>
+                    <source_model>Mage4\Turnstile\Model\Config\Source\Theme</source_model>
+                    <comment>The default is auto, which respects the user preference. This can be forced to light or dark by setting the theme accordingly.</comment>
+                </field>
+            </group>
+            <group id="m4_trunstile_frontend" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Storefront Settings</label>
+                <field id="contact" translate="label" type="select" sortOrder="140" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Contact Us</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customer_login" translate="label" type="select" sortOrder="110" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Customer Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customer_forgot_password" translate="label" type="select" sortOrder="120" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Forgot Password</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customer_create" translate="label" type="select" sortOrder="130" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Create New Customer Account</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customer_edit" translate="label" type="select" sortOrder="135" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Edit Customer Account</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="product_review" translate="label" type="select" sortOrder="150" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Product Review</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="sendfriend" translate="label" type="select" sortOrder="170" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Send To Friend</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="m4_trunstile_backend" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Admin Panel Settings</label>
+                <field id="user_login" translate="label" type="select" sortOrder="110" showInDefault="1"
+                       showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Enable for Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="user_forgot_password" translate="label" type="select" sortOrder="120" showInDefault="1"
+                       showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Enable for Forgot Password</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
