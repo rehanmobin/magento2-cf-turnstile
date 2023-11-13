@@ -29,3 +29,5 @@ The admin can set for various storefront visibility of Cloudflare Turnstile. Lik
 <img src="./contact.png">
 <img src="./admin-login.png">
 <img src="./admin-forgot-pass.png">
+
+Additional references, see Turnstile developers doc. (https://developers.cloudflare.com/turnstile/)
