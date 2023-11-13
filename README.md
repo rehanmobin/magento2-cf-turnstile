@@ -5,7 +5,7 @@
 ### Install via composer
 
 ```
-composer require mage4/magento2-run-sql
+composer require mage4/magento2-cf-turnstile
 
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
@@ -35,6 +35,12 @@ The extension allows Turnstile to protect your Magento or Adobe Commerce followi
 - Contact Us.
 - Admin User Login.
 - Admin User Forgot Password.
+
+<img src="doc/admin-login-short.png">
+<img src="doc/contact-short.png">
+
+## Setup And Configuration
+Follow this [documentation](doc/configuration.md) for setup and configuration options.
 
 ## About us
 We’re an innovative development agency building awesome websites, webshops and web applications with Latest Technologies. Check out our website [mage4.com](http://mage4.com/) or [email](mailto:contact@mage4.com).
